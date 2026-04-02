@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>De Anza Village Schedules</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      margin: 0;
+      padding: 16px;
+      background: #fff;
+      color: #222;
+    }
+
+    .nav-box {
+      background-color: #f9f9f9;
+      border: 2px solid #666;
+      padding: 20px;
+      margin-bottom: 40px;
+      border-radius: 8px;
+    }
+
+    .nav-box h2 { margin-top: 0; color: #333; }
+    .nav-box p  { font-size: 10pt; color: #555; }
+
+    .nav-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 15px;
+    }
+
+    .nav-grid a {
+      text-decoration: none;
+      padding: 8px;
+      border-radius: 4px;
+      background: white;
+    }
+
+    /* Village-specific nav link colors */
+    .nav-art  { color: #d1127e; border: 1px solid #ff99cc; }
+    .nav-biz  { color: #333;    border: 1px solid #ccc;    }
+    .nav-hlth { color: #0056b3; border: 1px solid #99ccff; }
+    .nav-lang { color: #e69500; border: 1px solid #ffa500; }
+    .nav-stem { color: #1b4332; border: 1px solid #b3ffcf; }
+    .nav-ssh  { color: #5a2d82; border: 1px solid #c9afff; }
+
+    /* Status banner */
+    #status {
+      font-size: 10pt;
+      color: #555;
+      margin-bottom: 12px;
+      min-height: 1.4em;
+    }
+
+    /* Tables */
+    .village-table {
+      border-collapse: collapse;
+      width: 100%;
+      border: 1px solid #666;
+      margin-bottom: 10px;
+      table-layout: fixed;
+    }
+
+    .village-table th,
+    .village-table td {
+      border: 1px solid #666;
+      padding: 5px 8px;
+      vertical-align: top;
+      font-size: 10pt;
+      width: 22%;
+    }
+
+    .village-table th:first-child,
+    .village-table td:first-child {
+      width: 12%;
+    }
+
+    .village-table thead th { font-size: 11pt; }
+    .village-table tbody td { white-space: pre-line; }
+
+    /* Village color schemes */
+    .art-head  { background-color: #ff99cc; }
+    .biz-head  { background-color: #cccccc; }
+    .hlth-head { background-color: #99ccff; }
+    .lang-head { background-color: #ffa500; }
+    .stem-head { background-color: #b3ffcf; }
+    .ssh-head  { background-color: #c9afff; }
+
+    .art-stripe  { background-color: #ff99cc; }
+    .biz-stripe  { background-color: #cccccc; }
+    .hlth-stripe { background-color: #99ccff; }
+    .lang-stripe { background-color: #ffa500; }
+    .stem-stripe { background-color: #b3ffcf; }
+    .ssh-stripe  { background-color: #c9afff; }
+
+    .back-link {
+      text-align: right;
+      margin-bottom: 40px;
+      font-size: 9pt;
+      color: #666;
+    }
+
+    .back-link a { color: #666; }
+  </style>
+</head>
+<body>
+
+<!-- Navigation Box -->
+<div class="nav-box">
+  <h2>De Anza Village Schedules</h2>
+  <p>Click a village to jump to its schedule:</p>
+  <div id="status">Loading schedule data…</div>
+  <div class="nav-grid">
+    <a class="nav-art"  href="#art">🌸 Artistic Expression</a>
+    <a class="nav-biz"  href="#biz">💼 Business &amp; Finance</a>
+    <a class="nav-hlth" href="#health">🩺 Health &amp; Life Sciences</a>
+    <a class="nav-lang" href="#lang">🗣️ Language &amp; Communication</a>
+    <a class="nav-stem" href="#stem">🧪 Physical Sciences &amp; Tech</a>
+    <a class="nav-ssh"  href="#ssh">⚖️ Social Sciences &amp; Humanities</a>
+  </div>
+</div>
+
+<!-- Artistic Expression -->
+<table id="art" class="village-table">
+  <thead>
+    <tr class="art-head"><th colspan="5" style="padding:10px;">Artistic Expression</th></tr>
+    <tr class="art-head">
+      <th style="width:12%;">Time</th><th style="width:22%;">Mon</th><th style="width:22%;">Tue</th><th style="width:22%;">Wed</th><th style="width:22%;">Thu</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>10-10:30</td><td></td><td></td><td></td><td></td></tr>
+    <tr class="art-stripe"><td>10:30-11</td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>11-11:30</td><td></td><td></td><td></td><td></td></tr>
+    <tr class="art-stripe"><td>11:30-12</td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>12-12:30</td><td></td><td></td><td></td><td></td></tr>
+    <tr class="art-stripe"><td>12:30-1</td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>1-1:30</td><td></td><td></td><td></td><td></td></tr>
+    <tr class="art-stripe"><td>1:30-2</td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>2-2:30</td><td></td><td></td><td></td><td></td></tr>
+    <tr class="art-stripe"><td>2:30-3</td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>3-3:30</td><td></td><td></td><td></td><td></td></tr>
+  </tbody>
+</table>
+<div class="back-link"><a href="#">↑ Back to Top</a></div>
+
+<!-- Business & Finance -->
+<table id="biz" class="village-table">
+  <thead>
+    <tr class="biz-head"><th colspan="5" style="padding:10px;">Business &amp; Finance</th></tr>
+    <tr class="biz-head">
+      <th style="width:12%;">Time</th><th>Mon</th><th>Tue</th><th>Wed</th><th>Thu</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>10-10:30</td><td></td><td></td><td></td><td></td></tr>
+    <tr class="biz-stripe"><td>10:30-11</td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>11-11:30</td><td></td><td></td><td></td><td></td></tr>
+    <tr class="biz-stripe"><td>11:30-12</td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>12-12:30</td><td></td><td></td><td></td><td></td></tr>
+    <tr class="biz-stripe"><td>12:30-1</td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>1-1:30</td><td></td><td></td><td></td><td></td></tr>
+    <tr class="biz-stripe"><td>1:30-2</td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>2-2:30</td><td></td><td></td><td></td><td></td></tr>
+    <tr class="biz-stripe"><td>2:30-3</td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>3-3:30</td><td></td><td></td><td></td><td></td></tr>
+  </tbody>
+</table>
+<div class="back-link"><a href="#">↑ Back to Top</a></div>
+
+<!-- Health & Life Sciences -->
+<table id="health" class="village-table">
+  <thead>
+    <tr class="hlth-head"><th colspan="5" style="padding:10px;">Health &amp; Life Sciences</th></tr>
+    <tr class="hlth-head">
+      <th style="width:12%;">Time</th><th>Mon</th><th>Tue</th><th>Wed</th><th>Thu</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>10-10:30</td><td></td><td></td><td></td><td></td></tr>
+    <tr class="hlth-stripe"><td>10:30-11</td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>11-11:30</td><td></td><td></td><td></td><td></td></tr>
+    <tr class="hlth-stripe"><td>11:30-12</td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>12-12:30</td><td></td><td></td><td></td><td></td></tr>
+    <tr class="hlth-stripe"><td>12:30-1</td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>1-1:30</td><td></td><td></td><td></td><td></td></tr>
+    <tr class="hlth-stripe"><td>1:30-2</td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>2-2:30</td><td></td><td></td><td></td><td></td></tr>
+    <tr class="hlth-stripe"><td>2:30-3</td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>3-3:30</td><td></td><td></td><td></td><td></td></tr>
+  </tbody>
+</table>
+<div class="back-link"><a href="#">↑ Back to Top</a></div>
+
+<!-- Language & Communication -->
+<table id="lang" class="village-table">
+  <thead>
+    <tr class="lang-head"><th colspan="5" style="padding:10px;">Language &amp; Communication</th></tr>
+    <tr class="lang-head">
+      <th style="width:12%;">Time</th><th>Mon</th><th>Tue</th><th>Wed</th><th>Thu</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>10-10:30</td><td></td><td></td><td></td><td></td></tr>
+    <tr class="lang-stripe"><td>10:30-11</td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>11-11:30</td><td></td><td></td><td></td><td></td></tr>
+    <tr class="lang-stripe"><td>11:30-12</td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>12-12:30</td><td></td><td></td><td></td><td></td></tr>
+    <tr class="lang-stripe"><td>12:30-1</td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>1-1:30</td><td></td><td></td><td></td><td></td></tr>
+    <tr class="lang-stripe"><td>1:30-2</td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>2-2:30</td><td></td><td></td><td></td><td></td></tr>
+    <tr class="lang-stripe"><td>2:30-3</td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>3-3:30</td><td></td><td></td><td></td><td></td></tr>
+  </tbody>
+</table>
+<div class="back-link"><a href="#">↑ Back to Top</a></div>
+
+<!-- Physical Sciences & Technology -->
+<table id="stem" class="village-table">
+  <thead>
+    <tr class="stem-head"><th colspan="5" style="padding:10px;">Physical Sciences &amp; Technology</th></tr>
+    <tr class="stem-head">
+      <th style="width:12%;">Time</th><th>Mon</th><th>Tue</th><th>Wed</th><th>Thu</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>10-10:30</td><td></td><td></td><td></td><td></td></tr>
+    <tr class="stem-stripe"><td>10:30-11</td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>11-11:30</td><td></td><td></td><td></td><td></td></tr>
+    <tr class="stem-stripe"><td>11:30-12</td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>12-12:30</td><td></td><td></td><td></td><td></td></tr>
+    <tr class="stem-stripe"><td>12:30-1</td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>1-1:30</td><td></td><td></td><td></td><td></td></tr>
+    <tr class="stem-stripe"><td>1:30-2</td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>2-2:30</td><td></td><td></td><td></td><td></td></tr>
+    <tr class="stem-stripe"><td>2:30-3</td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>3-3:30</td><td></td><td></td><td></td><td></td></tr>
+  </tbody>
+</table>
+<div class="back-link"><a href="#">↑ Back to Top</a></div>
+
+<!-- Social Sciences & Humanities -->
+<table id="ssh" class="village-table">
+  <thead>
+    <tr class="ssh-head"><th colspan="5" style="padding:10px;">Social Sciences &amp; Humanities</th></tr>
+    <tr class="ssh-head">
+      <th style="width:12%;">Time</th><th>Mon</th><th>Tue</th><th>Wed</th><th>Thu</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>10-10:30</td><td></td><td></td><td></td><td></td></tr>
+    <tr class="ssh-stripe"><td>10:30-11</td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>11-11:30</td><td></td><td></td><td></td><td></td></tr>
+    <tr class="ssh-stripe"><td>11:30-12</td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>12-12:30</td><td></td><td></td><td></td><td></td></tr>
+    <tr class="ssh-stripe"><td>12:30-1</td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>1-1:30</td><td></td><td></td><td></td><td></td></tr>
+    <tr class="ssh-stripe"><td>1:30-2</td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>2-2:30</td><td></td><td></td><td></td><td></td></tr>
+    <tr class="ssh-stripe"><td>2:30-3</td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>3-3:30</td><td></td><td></td><td></td><td></td></tr>
+  </tbody>
+</table>
+<div class="back-link"><a href="#">↑ Back to Top</a></div>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const CSV_URL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vR87113pXVA0y5lOdSzFoFD-npx-DNzq5Qt0GMe8CsJsCR8jO9l8bTJVgB6ocXlG_sD_u0k8-bqhZ0u/pub?gid=895413931&single=true&output=csv";
+  const statusEl = document.getElementById("status");
+
+  // Maps sheet time labels → HTML table row time labels
+  // Each day uses slightly different formats, so all variants are listed here
+  const timeMap = {
+    "10:00":       "10-10:30",   // Mon, Tue, Wed
+    "10:00-10:30": "10-10:30",   // Thu
+    "10:30-11:00": "10:30-11",   // Mon, Tue
+    "10:30":       "10:30-11",   // Wed, Thu
+    "11:00-11:30": "11-11:30",   // Mon, Tue, Wed, Thu
+    "11:30-12:00": "11:30-12",   // Mon
+    "11:30":       "11:30-12",   // Tue, Wed, Thu
+    "12:00-12:30": "12-12:30",   // Wed
+    "12:00":       "12-12:30",   // Mon, Tue, Thu
+    "12:30-1:00":  "12:30-1",    // Tue, Thu
+    "12:30":       "12:30-1",    // Mon, Wed
+    "1:00-1:30":   "1-1:30",     // Mon, Tue, Wed
+    "1:00":        "1-1:30",     // Thu
+    "1:30-2:00":   "1:30-2",     // Tue, Thu
+    "1:30":        "1:30-2",     // Mon, Wed
+    "2:00-2:30":   "2-2:30",     // Mon, Wed
+    "2:00":        "2-2:30",     // Tue, Thu
+    "2:30-3:00":   "2:30-3",     // Wed, Thu
+    "2:30":        "2:30-3",     // Mon, Tue
+    "3:00-3:30":   "3-3:30",     // Mon, Tue, Wed
+    "3:00":        "3-3:30"      // Thu
+  };
+
+  // Spreadsheet column index (0-based) → HTML table id
+  const villageMap = {
+    1: "art",
+    2: "biz",
+    3: "health",
+    4: "lang",
+    5: "stem",
+    6: "ssh"
+  };
+
+  // Day name → which <td> column in tbody (1=Mon, 2=Tue, 3=Wed, 4=Thu)
+  const dayColMap = {
+    "Monday": 1, "Tuesday": 2, "Wednesday": 3, "Thursday": 4
+  };
+
+  // Proper CSV parser — handles quoted multi-line cells
+  function parseCSV(text) {
+    const rows = [];
+    let row = [], cell = "", inQuotes = false;
+    for (let i = 0; i < text.length; i++) {
+      const ch = text[i];
+      if (inQuotes) {
+        if (ch === '"') {
+          if (text[i + 1] === '"') { cell += '"'; i++; }
+          else inQuotes = false;
+        } else { cell += ch; }
+      } else {
+        if (ch === '"')       { inQuotes = true; }
+        else if (ch === ',')  { row.push(cell); cell = ""; }
+        else if (ch === '\n') { row.push(cell); cell = ""; rows.push(row); row = []; }
+        else if (ch !== '\r') { cell += ch; }
+      }
+    }
+    if (row.length || cell) { row.push(cell); rows.push(row); }
+    return rows;
+  }
+
+  // Find the correct <td> by matching time label text and day column index
+  function getCell(tableId, htmlTime, dayColIndex) {
+    const table = document.getElementById(tableId);
+    if (!table) return null;
+    for (const tr of table.querySelectorAll("tbody tr")) {
+      const tds = tr.querySelectorAll("td");
+      if (tds[0] && tds[0].textContent.trim() === htmlTime) {
+        return tds[dayColIndex] || null;
+      }
+    }
+    return null;
+  }
+
+  fetch(CSV_URL)
+    .then(r => {
+      if (!r.ok) throw new Error("Network response was not ok");
+      return r.text();
+    })
+    .then(csv => {
+      const rows = parseCSV(csv);
+      let currentDay = null;
+      let cellsWritten = 0;
+
+      for (const row of rows) {
+        const colA = (row[0] || "").trim();
+
+        if (dayColMap.hasOwnProperty(colA)) {
+          currentDay = colA;
+          continue;
+        }
+
+        if (!currentDay) continue;
+
+        const htmlTime = timeMap[colA];
+        if (!htmlTime) continue;
+
+        const dayCol = dayColMap[currentDay];
+
+        for (const [colIdx, tableId] of Object.entries(villageMap)) {
+          const content = (row[parseInt(colIdx)] || "").trim();
+          if (!content) continue;
+          const td = getCell(tableId, htmlTime, dayCol);
+          if (td) {
+            td.innerHTML = content.replace(/\n/g, "<br>");
+            cellsWritten++;
+          }
+        }
+      }
+
+      statusEl.textContent = cellsWritten > 0
+        ? "✓ Schedule loaded successfully."
+        : "⚠️ Schedule loaded but no data was found — check sheet structure.";
+    })
+    .catch(err => {
+      statusEl.textContent = "⚠️ Could not load schedule data. Please refresh the page.";
+      console.error("Schedule load failed:", err);
+    });
+});
+</script>
+
+</body>
+</html>
